@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         confirmBtn.addEventListener('click', function() {
             if (!pendingFormData) return;
 
+            // ★GASのデプロイ設定で「アクセスできるユーザー」を「全員(Anyone)」にしてください
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3EqbVtjNXMeP5FP4isSH21thccOB4ojmzgIdNBVo2wv5c710ht9FUs6FYutyDMvwJ/exec'; 
             
             // ボタンの状態変更
@@ -112,11 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
             fetch(SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(pendingFormData)
             })
-            .then(() => {
+            .then(response => response.json())
+            .then(data => {
+                console.log('GAS Response:', data); // デバッグ用にレスポンスをログ出力
                 closeModal();
                 openCompletionModal(pendingFormData.id);
             })
