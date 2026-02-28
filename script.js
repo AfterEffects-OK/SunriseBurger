@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 12桁のランダム英数字ID生成関数
+    const generateUniqueId = () => {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = '';
+        const randomValues = new Uint8Array(12);
+        window.crypto.getRandomValues(randomValues);
+        for (let i = 0; i < 12; i++) {
+            result += chars[randomValues[i] % chars.length];
+        }
+        return result;
+    };
+
     // メニュー項目のチェックボックスと数量入力の連動
     // フォーム内のメニュー項目コンテナ（grid gap-3 の直下にある div）をすべて取得
     const menuItems = document.querySelectorAll('form .grid.gap-3 > div');
@@ -104,20 +116,31 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!pendingFormData) return;
 
             // ★GASのデプロイ設定で「アクセスできるユーザー」を「全員(Anyone)」にしてください
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3EqbVtjNXMeP5FP4isSH21thccOB4ojmzgIdNBVo2wv5c710ht9FUs6FYutyDMvwJ/exec'; 
+            const SCRIPT_URL_ORDER = 'https://script.google.com/macros/s/AKfycbw3EqbVtjNXMeP5FP4isSH21thccOB4ojmzgIdNBVo2wv5c710ht9FUs6FYutyDMvwJ/exec';
+            const SCRIPT_URL_DETAIL = 'https://script.google.com/macros/s/AKfycbxGDtidP7rFk3p1l6PB7h0jN3Ng6alpYcvVmdFT3ZGwDYGF03NPU1kjfxhUPw9-Mw6k/exec';
             
             // ボタンの状態変更
             const originalText = confirmBtn.textContent;
             confirmBtn.disabled = true;
             confirmBtn.textContent = '送信中...';
 
-            fetch(SCRIPT_URL, {
+            // 1. 注文データを送信
+            fetch(SCRIPT_URL_ORDER, {
                 method: 'POST',
                 body: JSON.stringify(pendingFormData)
             })
             .then(response => response.json())
             .then(data => {
-                console.log('GAS Response:', data); // デバッグ用にレスポンスをログ出力
+                console.log('GAS Order Response:', data);
+                // 2. 成功したら注文詳細データを送信
+                return fetch(SCRIPT_URL_DETAIL, {
+                    method: 'POST',
+                    body: JSON.stringify(pendingFormData)
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('GAS Detail Response:', data);
                 closeModal();
                 openCompletionModal(pendingFormData.id);
             })
@@ -156,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         const quantity = parseInt(quantityInput.value);
                         const subtotal = price * quantity;
 
-                        orderItems.push({ name, quantity, subtotal });
+                        orderItems.push({ name, price, quantity, subtotal });
                         totalAmount += subtotal;
                     }
                 }
@@ -180,7 +203,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 pickupTime: document.getElementById('pickup-time').value,
                 orderDetails: orderItems.map(item => `${item.name} x${item.quantity}`).join('\n'),
                 totalAmount: totalAmount,
-                notes: document.getElementById('notes').value
+                notes: document.getElementById('notes').value,
+                items: orderItems.map((item, index) => ({
+                    detailId: generateUniqueId(), // ID注文詳細（12桁の英数字）
+                    name: item.name,
+                    price: item.price,
+                    quantity: item.quantity,
+                    subtotal: item.subtotal
+                }))
             };
 
             // モーダルに内容を表示
