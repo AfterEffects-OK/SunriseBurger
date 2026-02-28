@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US | サンライズ・バーガー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
+        <div class="bg-stone-800 text-white text-[10px] py-1 text-center w-full">
+            ※このWebサイトは講義用デモサイトです。実在する店舗・企業とは関係ありません。
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <i class="fas fa-hamburger text-3xl text-orange-600 group-hover:rotate-12 transition transform"></i>
+                        <span class="text-2xl font-permanent-marker tracking-tight text-stone-800">SUNRISE <span class="text-orange-600">BURGER</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html#concept" class="hover:text-orange-600 font-bold transition">こだわり</a>
+                        <a href="menu.html" class="hover:text-orange-600 font-bold transition">メニュー</a>
+                        <a href="index.html#location" class="hover:text-orange-600 font-bold transition">店舗情報</a>
+                        <a href="order.html" class="bg-orange-600 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">ご注文はこちら</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-stone-600 text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#concept" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">こだわり</a>
+                <a href="menu.html" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">メニュー</a>
+                <a href="index.html#location" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">店舗情報</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-stone-200">
+                <div class="flex items-center px-5">
+                    <a href="order.html" class="w-full text-center bg-orange-600 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-700 transition">ご注文はこちら</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="about-bg h-[40vh] flex items-center justify-center text-center text-white px-4 mt-28">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">ABOUT US</h1>
+            <p class="text-lg font-bold tracking-widest uppercase text-orange-400">Our Story & Company</p>
+        </div>
+    </header>
+
+    <!-- Brand Concept -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-orange-600 font-bold tracking-widest mb-6">BRAND CONCEPT</h2>
+            <h3 class="text-2xl md:text-4xl font-black text-stone-800 mb-8 leading-relaxed">
+                「一日の始まりのような、<br>力強く温かい一杯の体験を。」
+            </h3>
+            <p class="text-stone-600 leading-loose text-lg">
+                サンライズ・バーガーは、自由が丘の閑静な住宅街に溶け込む、こだわりのグルメバーガーショップです。<br>
+                私たちは、単なるファストフードではなく、厳選された素材と職人の手仕事が織りなす「最高の一皿」を、お客様の日常にお届けすることを使命としています。
+            </p>
+        </div>
+    </section>
+
+    <!-- 5 Commitments -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-stone-800">5つのこだわり</h2>
+                <div class="h-1 w-24 bg-orange-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+                    <h4 class="text-xl font-bold text-orange-600 mb-3">01. 至高のパティ</h4>
+                    <p class="text-stone-600">国産牛100%を使用。肉本来の旨味を閉じ込めるため、毎日店内で粗挽きし、つなぎなしの肉厚なパティに仕上げています。</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+                    <h4 class="text-xl font-bold text-orange-600 mb-3">02. 特製天然酵母バンズ</h4>
+                    <p class="text-stone-600">近隣のベーカリーと共同開発。パティの肉汁をしっかり受け止める、香ばしくもっちりとした食感が特徴です。</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+                    <h4 class="text-xl font-bold text-orange-600 mb-3">03. 奥沢の恵み</h4>
+                    <p class="text-stone-600">「奥沢ガーデンバーガー」に代表されるよう、地元農家から直送される新鮮な地場野菜をふんだんに使用しています。</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+                    <h4 class="text-xl font-bold text-orange-600 mb-3">04. 手作りサイドメニュー</h4>
+                    <p class="text-stone-600">季節ごとの「三種芋のフレンチフライ」は、ご注文をいただいてから店内でカット。素材の甘みを最大限に引き出します。</p>
+                </div>
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+                    <h4 class="text-xl font-bold text-orange-600 mb-3">05. オリジナリティ</h4>
+                    <p class="text-stone-600">8種のスパイスを配合した「自家製クラフトコーラ」など、ここでしか味わえないペアリングを提案します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info & History -->
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-black text-stone-800 mb-8 border-l-4 border-orange-600 pl-4">企業・店舗情報</h3>
+                    <table class="w-full text-left border-collapse">
+                        <tbody class="divide-y divide-stone-200">
+                            <tr><th class="py-4 font-bold text-stone-700 w-1/3">店名</th><td class="py-4 text-stone-600">サンライズ・バーガー（Sunrise Burger）</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">運営会社</th><td class="py-4 text-stone-600">株式会社サンライズ・フードサービス</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">設立</th><td class="py-4 text-stone-600">2018年4月1日</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">所在地</th><td class="py-4 text-stone-600">東京都世田谷区奥沢 5-24-10<br>（自由が丘駅 徒歩5分）</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">代表者</th><td class="py-4 text-stone-600">佐藤 健一</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">事業内容</th><td class="py-4 text-stone-600">飲食店（ハンバーガー専門店）の経営、デリバリー事業</td></tr>
+                            <tr><th class="py-4 font-bold text-stone-700">主要取引先</th><td class="py-4 text-stone-600">近隣提携ベーカリー<br>地場野菜生産農家<br>自由が丘コーヒーロースター</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- History -->
+                <div>
+                    <h3 class="text-2xl font-black text-stone-800 mb-8 border-l-4 border-orange-600 pl-4">店舗運営の歩み</h3>
+                    <div class="space-y-8 border-l-2 border-stone-200 ml-3 pl-8 relative">
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-orange-600 border-4 border-white"></div>
+                            <span class="text-sm font-bold text-orange-600">2018年</span>
+                            <p class="text-stone-700 mt-1">自由が丘にて「サンライズ・バーガー」1号店オープン。</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <span class="text-sm font-bold text-stone-500">2024年3月</span>
+                            <p class="text-stone-700 mt-1">地元の皆様の声に応え、シェアして楽しめる「ペア・ディナーセット」を導入。</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <span class="text-sm font-bold text-stone-500">2024年</span>
+                            <p class="text-stone-700 mt-1">「三種芋のフレンチフライ」のサイズ展開（S/M/L）を開始し、より多様なニーズに対応。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 py-16 text-stone-500 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <i class="fas fa-hamburger text-4xl text-orange-600"></i>
+                <span class="text-3xl font-permanent-marker tracking-tight text-white">SUNRISE <span class="text-orange-600">BURGER</span></span>
+            </div>
+            <div class="mb-6">
+                <a href="about.html" class="text-sm hover:text-white transition border-b border-stone-700 pb-1">会社概要</a>
+            </div>
+            <p class="text-xs tracking-widest uppercase">&copy; 2024 SUNRISE BURGER. Tokyo Jiyugaoka.</p>
+            <p class="text-xs text-stone-600 mt-4">※このWebサイトは講義用デモサイトです。実在する店舗・企業とは関係ありません。</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

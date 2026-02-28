@@ -16,5 +16,10 @@ body { font-family: 'Noto Sans JP', sans-serif; }
     background-size: cover;
     background-position: center;
 }
+.about-bg {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
 .scroll-mt-20 { scroll-margin-top: 5rem; }
 .font-permanent-marker { font-family: 'Permanent Marker', cursive; }
