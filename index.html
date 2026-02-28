@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンライズ・バーガー | 自由が丘・奥沢のグルメバーガー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
+        <div class="bg-stone-800 text-white text-[10px] py-1 text-center w-full">
+            ※このWebサイトは講義用デモサイトです。実在する店舗・企業とは関係ありません。
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <i class="fas fa-hamburger text-3xl text-orange-600 group-hover:rotate-12 transition transform"></i>
+                        <span class="text-2xl font-permanent-marker tracking-tight text-stone-800">SUNRISE <span class="text-orange-600">BURGER</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#concept" class="hover:text-orange-600 font-bold transition">こだわり</a>
+                        <a href="#menu" class="hover:text-orange-600 font-bold transition">メニュー</a>
+                        <a href="#location" class="hover:text-orange-600 font-bold transition">店舗情報</a>
+                        <a href="order.html" class="bg-orange-600 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-700 transition shadow-lg shadow-orange-200">ご注文はこちら</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-stone-600 text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h2 class="text-lg md:text-2xl font-bold mb-4 tracking-widest uppercase">Tokyo Jiyugaoka / Okusawa</h2>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">一口で、自由が丘の<br><span class="text-orange-500">朝陽</span>が見える。</h1>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-white text-stone-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-stone-100 transition">メニューを見る</a>
+                <a href="order.html" class="bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition shadow-xl">今すぐ予約注文</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="py-24 scroll-mt-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-orange-600 font-bold tracking-widest mb-2">CONCEPT</h2>
+                <h3 class="text-3xl md:text-4xl font-black">街の日常を少しだけ贅沢にする</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="mb-6 overflow-hidden rounded-2xl aspect-square bg-stone-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="パティを焼いている様子" class="object-cover h-full w-full hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">超・粗挽きパティ</h4>
+                    <p class="text-stone-600 leading-relaxed">国産牛100%を8mmの極厚挽きに。200℃の鉄板で一気に焼き上げる、ステーキのような満足感。</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-6 overflow-hidden rounded-2xl aspect-square bg-stone-100 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="バンズのこだわり" class="object-cover h-full w-full hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">ベーカリー・ミモザの絆</h4>
+                    <p class="text-stone-600 leading-relaxed">近隣の老舗パン屋と共同開発。肉汁をしっかり受け止める天然酵母の特注バンズを毎朝お届け。</p>
+                </div>
+                <div class="text-center">
+                    <div class="mb-6 overflow-hidden rounded-2xl aspect-square bg-stone-100 flex items-center justify-center">
+                        <!-- 修正箇所: 新鮮なレタスとトマトの画像 -->
+                        <img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="新鮮なレタスとトマト" class="object-cover h-full w-full hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">世田谷アグリの恵み</h4>
+                    <p class="text-stone-600 leading-relaxed">地元の契約農家から届く朝採れ野菜。市場を通さないからこそ味わえる瑞々しさと甘み。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Promo Section -->
+    <section class="bg-stone-900 py-24 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <span class="text-orange-500 font-bold mb-4 block tracking-widest">WINTER LIMITED</span>
+                <h3 class="text-4xl md:text-5xl font-black mb-6 leading-tight">クワトロチーズの<br>雪解けバーガー</h3>
+                <p class="text-stone-400 mb-8 max-w-md leading-relaxed text-lg">
+                    4種類のチーズ（モッツァレラ、レッドチェダー、ゴルゴンゾーラ、パルメジャーノ）が奏でる、冬だけのご褒美。隠し味の白味噌ソースが奥深いコクを演出します。
+                </p>
+                <div class="flex items-baseline gap-4 mb-8">
+                    <span class="text-4xl font-bold text-orange-500 italic">¥1,700</span>
+                    <span class="text-stone-500 line-through">¥1,980</span>
+                </div>
+                <a href="order.html" class="inline-block bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition-all transform hover:-translate-y-1 shadow-xl">期間限定の味を予約する</a>
+            </div>
+            <div class="md:w-1/2 relative flex justify-center">
+                <div class="w-80 h-80 md:w-full md:aspect-square bg-orange-600 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[120px] opacity-20"></div>
+                <div class="relative z-10 group">
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="クワトロチーズの雪解けバーガー" 
+                         class="rounded-[2.5rem] shadow-2xl transform -rotate-2 group-hover:rotate-0 transition duration-700 object-cover w-full max-w-md border-8 border-stone-800">
+                    <div class="absolute -bottom-4 -right-4 bg-white text-stone-900 px-4 py-3 rounded-2xl shadow-2xl hidden md:block">
+                        <p class="text-xs font-bold text-orange-600 mb-1 tracking-tighter text-center">CHEESE LEVEL</p>
+                        <p class="font-permanent-marker text-5xl text-orange-600 leading-none text-center -mb-1">MAX!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 bg-stone-50 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-orange-600 font-bold tracking-widest mb-2">MENU</h2>
+                <h3 class="text-3xl md:text-4xl font-black">自慢のラインナップ</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group">
+                    <div class="overflow-hidden rounded-2xl mb-4 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="クラシックバーガー" class="object-cover w-full h-full group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-stone-900">サンライズ・クラシック</h4>
+                        <span class="text-orange-600 font-bold">¥1,280</span>
+                    </div>
+                    <p class="text-stone-500 text-sm">自家製BBQソースと厚切りスモークベーコン。不動のNo.1。</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group">
+                    <div class="overflow-hidden rounded-2xl mb-4 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="アボカドバーガー" class="object-cover w-full h-full group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-stone-900">アボカド・クリーン</h4>
+                        <span class="text-orange-600 font-bold">¥1,450</span>
+                    </div>
+                    <p class="text-stone-500 text-sm">女性人気No.1。完熟アボカドと爽やかなわさびマヨ。</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group">
+                    <div class="overflow-hidden rounded-2xl mb-4 aspect-video">
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="奥沢ガーデンバーガー" class="object-cover w-full h-full group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="text-xl font-bold text-stone-900">奥沢ガーデンバーガー</h4>
+                        <span class="text-orange-600 font-bold">¥1,100</span>
+                    </div>
+                    <p class="text-stone-500 text-sm">世田谷直送の旬野菜をグリルしたヘルシーな一品。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="menu.html" class="inline-block border-2 border-orange-600 text-orange-600 px-10 py-3 rounded-full font-bold hover:bg-orange-600 hover:text-white transition duration-300">
+                    全メニューを表示する <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Footer (省略せずに維持) -->
+    <section id="location" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="rounded-3xl overflow-hidden shadow-2xl h-96 bg-stone-200">
+                    <iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen src="https://maps.google.com/maps?q=東京都世田谷区奥沢5-24-10&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                </div>
+                <div>
+                    <h2 class="text-orange-600 font-bold tracking-widest mb-2">LOCATION</h2>
+                    <h3 class="text-3xl md:text-4xl font-black mb-8">自由が丘・奥沢の路地裏で</h3>
+                    <div class="space-y-6 text-stone-600">
+                        <p><i class="fas fa-clock mr-2 text-orange-600"></i> Lunch: 11:00 - 15:00 / Dinner: 17:00 - 21:00</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-orange-600"></i> 東京都世田谷区奥沢5-24-10</p>
+                        <p><i class="fas fa-phone mr-2 text-orange-600"></i> <a href="tel:03-5726-1234" class="hover:text-orange-700">03-5726-1234</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 py-16 text-stone-500 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <i class="fas fa-hamburger text-4xl text-orange-600"></i>
+                <span class="text-3xl font-permanent-marker tracking-tight text-white">SUNRISE <span class="text-orange-600">BURGER</span></span>
+            </div>
+            <p class="text-xs tracking-widest uppercase">&copy; 2024 SUNRISE BURGER. Tokyo Jiyugaoka.</p>
+            <p class="text-xs text-stone-600 mt-4">※このWebサイトは講義用デモサイトです。実在する店舗・企業とは関係ありません。</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
