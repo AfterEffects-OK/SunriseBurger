@@ -124,23 +124,21 @@ document.addEventListener('DOMContentLoaded', function() {
             confirmBtn.disabled = true;
             confirmBtn.textContent = '送信中...';
 
-            // 1. 注文データを送信
-            fetch(SCRIPT_URL_ORDER, {
-                method: 'POST',
-                body: JSON.stringify(pendingFormData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('GAS Order Response:', data);
-                // 2. 成功したら注文詳細データを送信
-                return fetch(SCRIPT_URL_DETAIL, {
+            // 並列で送信を実行
+            Promise.all([
+                fetch(SCRIPT_URL_ORDER, {
                     method: 'POST',
                     body: JSON.stringify(pendingFormData)
-                });
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('GAS Detail Response:', data);
+                }).then(res => res.json()),
+                fetch(SCRIPT_URL_DETAIL, {
+                    method: 'POST',
+                    body: JSON.stringify(pendingFormData)
+                }).then(res => res.json())
+            ])
+            .then(([orderData, detailData]) => {
+                console.log('GAS Order Response:', orderData);
+                console.log('GAS Detail Response:', detailData);
+                
                 closeModal();
                 openCompletionModal(pendingFormData.id);
             })
