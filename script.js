@@ -124,21 +124,25 @@ document.addEventListener('DOMContentLoaded', function() {
             confirmBtn.disabled = true;
             confirmBtn.textContent = '送信中...';
 
-            // 並列で送信を実行
-            Promise.all([
-                fetch(SCRIPT_URL_ORDER, {
-                    method: 'POST',
-                    body: JSON.stringify(pendingFormData)
-                }).then(res => res.json()),
-                fetch(SCRIPT_URL_DETAIL, {
-                    method: 'POST',
-                    body: JSON.stringify(pendingFormData)
-                }).then(res => res.json())
-            ])
-            .then(([orderData, detailData]) => {
+            // 1. 注文データを送信
+            fetch(SCRIPT_URL_ORDER, {
+                method: 'POST',
+                body: JSON.stringify(pendingFormData)
+            })
+            .then(res => res.json())
+            .then(orderData => {
                 console.log('GAS Order Response:', orderData);
+                // 2. 注文データの送信が成功したら、次に注文詳細データを送信
+                return fetch(SCRIPT_URL_DETAIL, {
+                    method: 'POST',
+                    body: JSON.stringify(pendingFormData)
+                });
+            })
+            .then(res => res.json())
+            .then(detailData => {
                 console.log('GAS Detail Response:', detailData);
                 
+                // 両方の送信が成功したらモーダルを閉じて完了画面を表示
                 closeModal();
                 openCompletionModal(pendingFormData.id);
             })
