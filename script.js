@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            const menuIcon = this.querySelector('i');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon between bars and times (X)
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            } else {
+                menuIcon.classList.replace('fa-bars', 'fa-times');
+            }
+        });
+    }
+
     // 12桁のランダム英数字ID生成関数
     const generateUniqueId = () => {
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

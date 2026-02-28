@@ -32,7 +32,20 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-stone-600 text-2xl"><i class="fas fa-bars"></i></button>
+                    <button id="mobile-menu-button" class="text-stone-600 text-2xl"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#concept" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">こだわり</a>
+                <a href="index.html#menu" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">メニュー</a>
+                <a href="index.html#location" class="text-stone-700 hover:bg-orange-500 hover:text-white block px-3 py-2 rounded-md text-base font-bold">店舗情報</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-stone-200">
+                <div class="flex items-center px-5">
+                    <a href="order.html" class="w-full text-center bg-orange-600 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-700 transition">ご注文はこちら</a>
                 </div>
             </div>
         </div>
