@@ -87,7 +87,7 @@
 
                     <div>
                         <label for="pickup-time" class="block text-sm font-bold text-stone-700 mb-2">受取希望日時 <span class="text-orange-600">*</span></label>
-                        <input type="datetime-local" id="pickup-time" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition" required>
+                        <input type="datetime-local" id="pickup-time" step="900" class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none transition" required>
                     </div>
 
                     <div>
@@ -95,11 +95,12 @@
                         
                         <div class="space-y-8">
                             <!-- BURGERS -->
-                            <div>
+                            <div id="burgers-section">
                                 <h3 class="font-black text-stone-800 mb-3 flex items-center gap-2 border-b border-stone-200 pb-2">
                                     <i class="fas fa-hamburger text-orange-600"></i> BURGERS
                                 </h3>
                                 <div class="grid gap-3">
+                                    <!-- サンライズ・クラシック -->
                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
@@ -111,39 +112,31 @@
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
                                     </div>
+                                    <!-- アボカド・クリーンバーガー -->
                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
-                                            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="クワトロチーズバーガー" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="アボカド・クリーンバーガー" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
                                             <div class="flex flex-col">
-                                                <span class="font-bold text-stone-700">クワトロチーズバーガー</span>
-                                                <span class="text-xs text-orange-600 font-bold">¥1,700</span>
-                                            </div>
-                                        </label>
-                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
-                                    </div>
-                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
-                                        <label class="flex items-center gap-4 cursor-pointer flex-grow">
-                                            <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
-                                            <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="アボカド・クリーン" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
-                                            <div class="flex flex-col">
-                                                <span class="font-bold text-stone-700">アボカド・クリーン</span>
+                                                <span class="font-bold text-stone-700">アボカド・クリーンバーガー</span>
                                                 <span class="text-xs text-orange-600 font-bold">¥1,450</span>
                                             </div>
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
                                     </div>
+                                    <!-- ダブル・グラビティ -->
                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
-                                            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="スパイシーチリビーンズ" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ダブル・グラビティ" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
                                             <div class="flex flex-col">
-                                                <span class="font-bold text-stone-700">スパイシーチリビーンズ</span>
-                                                <span class="text-xs text-orange-600 font-bold">¥1,580</span>
+                                                <span class="font-bold text-stone-700">ダブル・グラビティ</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥1,850</span>
                                             </div>
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
                                     </div>
+                                    <!-- 奥沢ガーデンバーガー -->
                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
@@ -155,17 +148,33 @@
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
                                     </div>
+                                    <!-- ブルーチーズ＆ハニー -->
                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
-                                            <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
-                                            <img src="https://images.unsplash.com/photo-1525164286253-04e68b9d94c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ザ・キングダブル" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0"/>
+                                            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="ブルーチーズ＆ハニー" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
                                             <div class="flex flex-col">
-                                                <span class="font-bold text-stone-700">ザ・キングダブル</span>
-                                                <span class="text-xs text-orange-600 font-bold">¥2,100</span>
+                                                <span class="font-bold text-stone-700">ブルーチーズ＆ハニー</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥1,580</span>
                                             </div>
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
                                     </div>
+                                    <!-- スパイシー・サンライズ -->
+
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-4 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="スパイシー・サンライズ" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+                                            <div class="flex flex-col">
+                                                <span class="font-bold text-stone-700">スパイシー・サンライズ</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥1,350</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none ml-2">
+                                    </div>
+
+                                    <!-- 【期間限定】雪解けバーガー -->
                                     <div class="flex items-center justify-between bg-orange-50 p-3 rounded-lg border border-orange-200">
                                         <label class="flex items-center gap-4 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600 flex-shrink-0">
@@ -180,6 +189,100 @@
                                 </div>
                             </div>
 
+                            <!-- SET MENU -->
+                            <div id="set-menu-section">
+                                <h3 class="font-black text-stone-800 mb-3 flex items-center gap-2 border-b border-stone-200 pb-2">
+                                    <i class="fas fa-star text-orange-600"></i> SET MENU
+                                </h3>
+                                <div class="grid gap-3">
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col">
+                                                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                    <span class="font-bold text-stone-700">スタンダードセット</span>
+                                                    <span class="text-xs text-orange-600 font-bold">+¥500</span>
+                                                </div>
+                                                <span class="text-xs text-stone-500">フレンチフライ(S) ＋ ドリンク</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <!-- スタンダードセット詳細 -->
+                                    <div class="set-details hidden p-3 pt-0 border-x border-b border-stone-100 rounded-b-lg bg-stone-50 -mt-2 mb-3">
+                                        <div class="details-container space-y-3"></div>
+                                    </div>
+
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col">
+                                                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                    <span class="font-bold text-stone-700">サラダ＆スープセット</span>
+                                                    <span class="text-xs text-orange-600 font-bold">+¥650</span>
+                                                </div>
+                                                <span class="text-xs text-stone-500">地場野菜のミニサラダ ＋ 日替わりスープ</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col">
+                                                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                    <span class="font-bold text-stone-700">サンライズ・フルコース</span>
+                                                    <span class="text-xs text-orange-600 font-bold">+¥850</span>
+                                                </div>
+                                                <span class="text-xs text-stone-500">ポテト(S) ＋ ドリンク ＋ ミニデザート</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <!-- サンライズ・フルコース詳細 -->
+                                    <div class="set-details hidden p-3 pt-0 border-x border-b border-stone-100 rounded-b-lg bg-stone-50 -mt-2 mb-3">
+                                        <div class="details-container space-y-3"></div>
+                                    </div>
+
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col">
+                                                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                    <span class="font-bold text-stone-700">ランチタイム限定セット</span>
+                                                    <span class="text-xs text-orange-600 font-bold">+¥400</span>
+                                                </div>
+                                                <span class="text-xs text-stone-500">平日11-14時限定。ポテト(S) ＋ ドリンク</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <!-- ランチタイム限定セット詳細 -->
+                                    <div class="set-details hidden p-3 pt-0 border-x border-b border-stone-100 rounded-b-lg bg-stone-50 -mt-2 mb-3">
+                                        <div class="details-container space-y-3"></div>
+                                    </div>
+
+                                     <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col">
+                                                <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                    <span class="font-bold text-stone-700">ペア・ディナーセット</span>                                              
+                                                    <span class="text-xs text-orange-600 font-bold">¥5,500</span>
+                                                </div>
+                                                <span class="text-xs text-stone-500">バーガー2個 ＋ サイド2品 ＋ ドリンク2杯</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <!-- ペア・ディナーセット詳細 -->
+                                    <div class="set-details pair-set-details hidden p-3 pt-0 border-x border-b border-stone-100 rounded-b-lg bg-stone-50 -mt-2 mb-3">
+                                        <div class="details-container space-y-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- SIDES & DRINKS -->
                             <div>
                                 <h3 class="font-black text-stone-800 mb-3 flex items-center gap-2 border-b border-stone-200 pb-2">
@@ -190,7 +293,7 @@
                                         <label class="flex items-center gap-3 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600">
                                             <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                                                <span class="font-bold text-stone-700">フレンチフライ M</span>
+                                                <span class="font-bold text-stone-700">三種芋のフレンチフライ (S)</span>
                                                 <span class="text-xs text-orange-600 font-bold">¥350</span>
                                             </div>
                                         </label>
@@ -200,8 +303,8 @@
                                         <label class="flex items-center gap-3 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600">
                                             <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                                                <span class="font-bold text-stone-700">自家製オニオンリング</span>
-                                                <span class="text-xs text-orange-600 font-bold">¥480</span>
+                                                <span class="font-bold text-stone-700">三種芋のフレンチフライ (M)</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥450</span>
                                             </div>
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
@@ -210,7 +313,17 @@
                                         <label class="flex items-center gap-3 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600">
                                             <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                                                <span class="font-bold text-stone-700">チキンナゲット (5pc)</span>
+                                                <span class="font-bold text-stone-700">三種芋のフレンチフライ (L)</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥600</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">スモーキー・オニオンリング</span>
                                                 <span class="text-xs text-orange-600 font-bold">¥520</span>
                                             </div>
                                         </label>
@@ -220,7 +333,7 @@
                                         <label class="flex items-center gap-3 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600">
                                             <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                                                <span class="font-bold text-stone-700">コカ・コーラ</span>
+                                                <span class="font-bold text-stone-700">地場野菜のミニサラダ</span>
                                                 <span class="text-xs text-orange-600 font-bold">¥380</span>
                                             </div>
                                         </label>
@@ -230,8 +343,68 @@
                                         <label class="flex items-center gap-3 cursor-pointer flex-grow">
                                             <input type="checkbox" class="w-5 h-5 accent-orange-600">
                                             <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-                                                <span class="font-bold text-stone-700">自家製ジンジャーエール</span>
+                                                <span class="font-bold text-stone-700">具だくさんクラムチャウダー</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥580</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">自家製クラフトコーラ</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥550</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">シーズナル・スムージー</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥680</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600"/>
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">オリジナルブレンドコーヒー</span>
                                                 <span class="text-xs text-orange-600 font-bold">¥450</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                    <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600">
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">紅茶</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥450</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                        <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">                                          
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600"/>
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">キッズ・オレンジジュース</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥300</span>
+                                            </div>
+                                        </label>
+                                        <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
+                                    </div>
+                                        <div class="flex items-center justify-between bg-stone-50 p-3 rounded-lg border border-stone-100">
+                                        <label class="flex items-center gap-3 cursor-pointer flex-grow">                                          
+                                            <input type="checkbox" class="w-5 h-5 accent-orange-600"/>
+                                            <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+                                                <span class="font-bold text-stone-700">キッズ・スライダーセット</span>
+                                                <span class="text-xs text-orange-600 font-bold">¥980</span>
                                             </div>
                                         </label>
                                         <input type="number" min="0" placeholder="0" class="w-16 p-2 rounded border border-stone-200 text-center focus:border-orange-500 outline-none">
@@ -306,20 +479,39 @@
     <div id="completion-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 px-4 backdrop-blur-sm">
         <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform transition-all scale-100">
             <div class="p-8 text-center">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-600 mb-4">
-                    <i class="fas fa-check text-3xl"></i>
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-orange-100 text-orange-600 mb-6 animate-bounce">
+                    <i class="fas fa-hamburger text-4xl"></i>
                 </div>
-                <h3 class="text-2xl font-black text-stone-800 mb-2">ご注文ありがとうございます！</h3>
-                <p class="text-stone-500 text-sm mb-6">以下のQRコードを店頭でご提示ください。</p>
+                <h3 class="text-3xl font-permanent-marker text-stone-800 mb-2 tracking-tight">THANK YOU!</h3>
+                <p class="text-stone-500 text-sm mb-8 font-bold">ご注文ありがとうございます！<br>以下のQRコードを店頭でご提示ください。</p>
                 
-                <div class="bg-white p-4 rounded-xl border-2 border-stone-100 inline-block mb-6">
+                <div class="bg-white p-4 rounded-2xl border-4 border-orange-100 inline-block mb-6 shadow-inner">
                     <div id="qrcode" class="flex justify-center"></div>
                 </div>
                 
-                <p class="text-xs text-stone-400 mb-6">注文ID: <span id="completion-order-id" class="font-mono font-bold text-stone-600"></span></p>
+                <div class="bg-stone-100 rounded-lg p-3 mb-8">
+                    <p class="text-xs text-stone-500 mb-1 font-bold">ORDER ID</p>
+                    <p class="text-lg font-mono font-black text-stone-800 tracking-wider" id="completion-order-id"></p>
+                </div>
 
-                <button id="completion-close-btn" class="w-full py-3 rounded-full font-bold text-white bg-stone-800 hover:bg-stone-900 transition duration-300">
+                <button id="completion-close-btn" class="w-full py-4 rounded-full font-bold text-white bg-orange-600 hover:bg-orange-700 transition duration-300 shadow-lg shadow-orange-200 transform hover:-translate-y-1">
                     閉じる
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="alert-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 px-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full overflow-hidden transform transition-all scale-100">
+            <div class="p-6 text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-orange-600 mb-4">
+                    <i class="fas fa-exclamation-triangle text-xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-stone-800 mb-2">お知らせ</h3>
+                <p id="alert-message" class="text-stone-500 text-sm mb-6 whitespace-pre-wrap"></p>
+                <button id="alert-close-btn" class="w-full py-3 rounded-full font-bold text-white bg-orange-600 hover:bg-orange-700 transition duration-300">
+                    OK
                 </button>
             </div>
         </div>
