@@ -112,7 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             fetch(SCRIPT_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(pendingFormData)
             })
             .then(() => {
