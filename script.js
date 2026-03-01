@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ホーム画面のQRコード生成
+    const homeQrcodeContainer = document.getElementById("home-qrcode");
+    if (homeQrcodeContainer && typeof QRCode !== 'undefined') {
+        new QRCode(homeQrcodeContainer, {
+            text: "https://aftereffects-ok.github.io/SunriseBurger/",
+            width: 100,
+            height: 100,
+            colorDark : "#ea580c",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    }
+
     // 受取希望日時の設定 (現在時刻から30分後以降、15分刻み)
     const pickupTimeInput = document.getElementById('pickup-time');
     if (pickupTimeInput) {
@@ -295,10 +308,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const SCRIPT_URL_ORDER = 'https://script.google.com/macros/s/AKfycbw3EqbVtjNXMeP5FP4isSH21thccOB4ojmzgIdNBVo2wv5c710ht9FUs6FYutyDMvwJ/exec';
             const SCRIPT_URL_DETAIL = 'https://script.google.com/macros/s/AKfycbxGDtidP7rFk3p1l6PB7h0jN3Ng6alpYcvVmdFT3ZGwDYGF03NPU1kjfxhUPw9-Mw6k/exec';
             
+            const iconContainer = document.getElementById('confirmation-icon-container');
+            const icon = document.getElementById('confirmation-icon');
+
             // ボタンの状態変更
             const originalText = confirmBtn.textContent;
             confirmBtn.disabled = true;
             confirmBtn.textContent = '送信中...';
+            if(icon) icon.classList.add('animate-bounce');
 
             // 1. 注文データを送信
             fetch(SCRIPT_URL_ORDER, {
@@ -328,6 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .finally(() => {
                 confirmBtn.disabled = false;
                 confirmBtn.textContent = originalText;
+                if(icon) icon.classList.remove('animate-bounce');
             });
         });
     }
